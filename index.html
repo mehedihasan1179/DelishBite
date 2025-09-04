@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DelishBite | Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">DelishBite</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="reservation.html">Reservation</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+         <!-- <button class="animated-border-btn">Book a table</button> -->
+      </ul>
+
+      <div class="icons">
+        <a href="#" class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="#" class="cart-icon"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="#" class="user-icon"><i class="fa-solid fa-user"></i></a>  
+      </div>
+     
+      <div class="hamburger" id="hamburger">
+        <span id="hamburger-icon">☰</span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Menu overlay for mobile -->
+  <div class="menu-overlay" id="menuOverlay">
+    <ul class="nav-links-mobile">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="order.html">Order</a></li>
+      <li><a href="reservation.html">Reservation</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <section class="hero">
+      <h1>Welcome to DelishBite</h1>
+      <p>Experience the taste of tradition and creativity.</p>
+      <a href="menu.html" class="btn">Explore Our Menu</a>
+    </section>
+  </main>
+
+
+  <!-- about us satrts -->
+  <section class="container about-section">
+    <div class="about-images">
+      <img src="./assets/set-menu_1.jpg" alt="Restaurant 1" class="lightbox-img set-menu_1">
+      <img src="./assets/set-menu_2.avif" alt="Restaurant 2" class="lightbox-img set-menu_2">
+      <img src="./assets/set-menu_3.jpg" alt="Restaurant 3" class="lightbox-img set-menu_3">
+      <img src="./assets/set-menu_4.avif" alt="Restaurant 4" class="lightbox-img set-menu_4">
+
+
+     </div>
+    
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+      <span class="modal-close">&times;</span>
+      <img class="modal-content" id="modalImage" />
+    </div>
+
+    <div class="about-content">
+      <h2>About Us</h2>
+      <p>
+        At DelishBite, we blend tradition with innovation to serve food that not only satisfies your hunger but also feeds your soul. From hand-picked ingredients to warm hospitality, our mission is to give you a memorable dining experience — every time.
+      </p>
+      <p>
+        Whether it's a casual lunch, a romantic dinner, or a family gathering, DelishBite welcomes you with open arms and full plates.
+      </p>
+      <a href="about.html" class="read-more-btn">Read More</a>
+    </div>
+    
+  </section>
+
+
+<!-- menu section -->
+  <section class="menu-section">
+      <div class="container">
+      <div class="menu-header">
+        <h2>Our Delicious Menu</h2>
+        <p>Discover our carefully crafted dishes made with the finest ingredients</p>
+      </div>
+
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="pizza">Pizza</button>
+      <button class="filter-btn" data-category="burgers">Burgers</button>
+      <button class="filter-btn" data-category="pasta">Pasta</button>
+      <button class="filter-btn" data-category="salads">Salads</button>
+      <button class="filter-btn" data-category="desserts">Desserts</button>
+    </div>
+
+      <div class="menu-items" id="menu-container"></div>
+    </div>
+    </section>
+
+
+
+
+  <footer>
+    <p>&copy; 2025 DelishBite. All rights reserved.</p>
+  </footer>
+
+  <script src="./index.js"></script>
+</body>
+</html>
