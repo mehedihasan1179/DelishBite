@@ -127,20 +127,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
       menuItem.innerHTML = `
         <div class="menu-item-img-wrapper">
-          <img src="${item.img}" alt="${item.name}" class="menu-item-img">
-          <div class="menu-item-overlay">
-            <i class="fa-solid fa-eye"></i>
-            <i class="fa-solid fa-cart-flatbed"></i>
+          <div class="card-inner">
+            <div class="card-front">
+              <img
+                src="${item.img}"
+                alt="${item.name}"
+                class="menu-item-img"
+              >
+            </div>
+            <div class="card-back">
+              <div class="overlay-icons">
+                <i class="fa-solid fa-eye" title="Preview"></i>
+                <i class="fa-solid fa-cart-flatbed" title="Add to cart"></i>
+              </div>
+              <div class="menu-item-content">
+                <div class="menu-item-text">
+                  <div class="menu-item-title"><h3>${item.name}</h3></div>
+                  <p class="menu-item-desc">
+                    ${item.desc}
+                  </p>
+                </div>
+                <span class="menu-item-price">${item.price}</span>
+              </div>
+              
+            </div>
           </div>
         </div>
-        <div class="menu-item-content">
-          <div class="menu-item-title">
-            <h3>${item.name}</h3>
-            <span class="menu-item-price">${item.price}</span>
-          </div>
-          <p class="menu-item-desc">${item.desc}</p>
-        </div>
-      `;
+      `
       menuContainer.appendChild(menuItem);
     });
   }
@@ -161,6 +174,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+
+
+
+
 
 
 
