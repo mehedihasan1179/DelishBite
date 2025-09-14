@@ -1,153 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About delishbite</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body style="background-color: #f7e8d9;">
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body style="background-color: #f7e8d9">
     <header>
-    <nav>
-      <div class="logo">DelishBite</div>
-      <ul class="nav-links" id="navLinks">
+      <nav>
+        <div class="logo">DelishBite</div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="order.html">Order</a></li>
+          <li><a href="reservation.html">Reservation</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <button class="animated-border-btn">Book a table</button>
+        </ul>
+
+        <div class="icons">
+          <a href="#" class="search-icon"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></a>
+          <a href="#" class="cart-icon"
+            ><i class="fa-solid fa-cart-shopping"></i
+          ></a>
+          <a href="#" class="user-icon"><i class="fa-solid fa-user"></i></a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <span id="hamburger-icon">☰</span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Menu overlay for mobile -->
+    <div class="menu-overlay" id="menuOverlay">
+      <ul class="nav-links-mobile">
         <li><a href="index.html">Home</a></li>
         <li><a href="menu.html">Menu</a></li>
         <li><a href="order.html">Order</a></li>
         <li><a href="reservation.html">Reservation</a></li>
         <li><a href="reviews.html">Reviews</a></li>
         <li><a href="contact.html">Contact</a></li>
-         <button class="animated-border-btn">Book a table</button>
       </ul>
-     
-      <div class="hamburger" id="hamburger">
-        <span id="hamburger-icon">☰</span>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Menu overlay for mobile -->
-  <div class="menu-overlay" id="menuOverlay">
-    <ul class="nav-links-mobile">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="menu.html">Menu</a></li>
-      <li><a href="order.html">Order</a></li>
-      <li><a href="reservation.html">Reservation</a></li>
-      <li><a href="reviews.html">Reviews</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </div>
+    </div>
 
     <div class="about-header-container">
-         <h2 class="about-header">About Delishbite</h2>
+      <h2 class="about-header">About Delishbite</h2>
 
-        <div class="progress-container">
-            <div class="progress-bar" id="myBar"></div>
-        </div>
+      <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+      </div>
     </div>
-   
 
     <div class="container slideshow">
-        <div class="mySlides">
-            <div class="numbertext">1 / 8</div>
-            <img src="./assets/restaurant-view.avif" style="width:100%">
-        </div>
+      <div class="mySlides">
+        <div class="numbertext">1 / 8</div>
+        <img src="./assets/restaurant-view.avif" style="width: 100%" />
+      </div>
 
-        <div class="mySlides">
-            <div class="numbertext">2 / 8</div>
-            <img src="./assets/reataurant-view2.avif" style="width:100%">
-        </div>
+      <div class="mySlides">
+        <div class="numbertext">2 / 8</div>
+        <img src="./assets/reataurant-view2.avif" style="width: 100%" />
+      </div>
 
-        <div class="mySlides">
-            <div class="numbertext">3 / 8</div>
-            <img src="./assets/burger-frenchfry.avif" style="width:100%">
-        </div>
+      <div class="mySlides">
+        <div class="numbertext">3 / 8</div>
+        <img src="./assets/burger-frenchfry.avif" style="width: 100%" />
+      </div>
 
-        <div class="mySlides">
-            <div class="numbertext">4 / 8</div>
-            <img src="./assets/set-menu_3.avif" style="width:100%">
-        </div>
+      <div class="mySlides">
+        <div class="numbertext">4 / 8</div>
+        <img src="./assets/set-menu_3.avif" style="width: 100%" />
+      </div>
 
-        <div class="mySlides">
-            <div class="numbertext">5 / 8</div>
-            <img src="./assets/set-menu_2.avif" style="width:100%">
-        </div>
+      <div class="mySlides">
+        <div class="numbertext">5 / 8</div>
+        <img src="./assets/set-menu_2.avif" style="width: 100%" />
+      </div>
 
-        <div class="mySlides">
-            <div class="numbertext">6 / 8</div>
-            <img src="./assets/burgerncakes.avif" style="width:100%">
-        </div>
-        <div class="mySlides">
-            <div class="numbertext">7 / 8</div>
-            <img src="./assets/fish.avif" style="width:100%">
-        </div>
-        <div class="mySlides">
-            <div class="numbertext">8 / 8</div>
-            <img src="./assets/outside-view.avif" style="width:100%">
-        </div>
+      <div class="mySlides">
+        <div class="numbertext">6 / 8</div>
+        <img src="./assets/burgerncakes.avif" style="width: 100%" />
+      </div>
+      <div class="mySlides">
+        <div class="numbertext">7 / 8</div>
+        <img src="./assets/fish.avif" style="width: 100%" />
+      </div>
+      <div class="mySlides">
+        <div class="numbertext">8 / 8</div>
+        <img src="./assets/outside-view.avif" style="width: 100%" />
+      </div>
 
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
 
-        <div class="caption-container">
-            <p id="caption"></p>
-        </div>
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
 
-        <div class="row">
-            <div class="column">
-                <img class="demo cursor" src="./assets/outside-view.avif" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="./assets/reataurant-view2.avif" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="./assets/burger-frenchfry.avif" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="./assets/set-menu_3.avif" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="./assets/set-menu_2.avif" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
-            </div>    
-            <div class="column">
-                <img class="demo cursor" src="./assets/burgerncakes.avif" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="./assets/fish.avif" style="width:100%" onclick="currentSlide(7)" alt="Snowy Mountains">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="./assets/outside-view.avif" style="width:100%" onclick="currentSlide(8)" alt="Snowy Mountains">
-            </div>
+      <div class="row">
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="./assets/outside-view.avif"
+            style="width: 100%"
+            onclick="currentSlide(1)"
+            alt="The Woods"
+          />
         </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="./assets/reataurant-view2.avif"
+            style="width: 100%"
+            onclick="currentSlide(2)"
+            alt="Cinque Terre"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="./assets/burger-frenchfry.avif"
+            style="width: 100%"
+            onclick="currentSlide(3)"
+            alt="Mountains and fjords"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="./assets/set-menu_3.avif"
+            style="width: 100%"
+            onclick="currentSlide(4)"
+            alt="Northern Lights"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="./assets/set-menu_2.avif"
+            style="width: 100%"
+            onclick="currentSlide(5)"
+            alt="Nature and sunrise"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="./assets/burgerncakes.avif"
+            style="width: 100%"
+            onclick="currentSlide(6)"
+            alt="Snowy Mountains"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="./assets/fish.avif"
+            style="width: 100%"
+            onclick="currentSlide(7)"
+            alt="Snowy Mountains"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="./assets/outside-view.avif"
+            style="width: 100%"
+            onclick="currentSlide(8)"
+            alt="Snowy Mountains"
+          />
+        </div>
+      </div>
     </div>
 
     <div class="container about-section-content">
-        <h3>DelishBite: A Culinary Journey of Tradition and Taste</h3>
-        <p>DelishBite is more than just a restaurant—it’s a culinary haven where tradition meets innovation to create unforgettable dining experiences. Our philosophy is rooted in the belief that food should do more than satisfy hunger; it should nourish the soul and spark joy. At DelishBite, every dish is crafted with care, blending time-honored recipes with creative twists to delight your palate. From the moment you step through our doors, you’re welcomed with warm hospitality, inviting ambiance, and a commitment to making every visit memorable.</p>
-        <h3>Welcome to DelishBite: Where Food Meets Soul</h3>
-        <p>Our ingredients are the heart of our cuisine. We source hand-picked, high-quality produce, meats, and spices to ensure every bite bursts with flavor and freshness. Whether it’s a vibrant salad made with locally grown greens, a perfectly spiced entrée inspired by global culinary traditions, or a decadent dessert that feels like a warm hug, our menu reflects a dedication to excellence. Our chefs are passionate about balancing authenticity with innovation, creating dishes that honor classic flavors while introducing unexpected elements to surprise and delight.</p>
+      <h3>DelishBite: A Culinary Journey of Tradition and Taste</h3>
+      <p>
+        DelishBite is more than just a restaurant—it’s a culinary haven where
+        tradition meets innovation to create unforgettable dining experiences.
+        Our philosophy is rooted in the belief that food should do more than
+        satisfy hunger; it should nourish the soul and spark joy. At DelishBite,
+        every dish is crafted with care, blending time-honored recipes with
+        creative twists to delight your palate. From the moment you step through
+        our doors, you’re welcomed with warm hospitality, inviting ambiance, and
+        a commitment to making every visit memorable.
+      </p>
+      <h3>Welcome to DelishBite: Where Food Meets Soul</h3>
+      <p>
+        Our ingredients are the heart of our cuisine. We source hand-picked,
+        high-quality produce, meats, and spices to ensure every bite bursts with
+        flavor and freshness. Whether it’s a vibrant salad made with locally
+        grown greens, a perfectly spiced entrée inspired by global culinary
+        traditions, or a decadent dessert that feels like a warm hug, our menu
+        reflects a dedication to excellence. Our chefs are passionate about
+        balancing authenticity with innovation, creating dishes that honor
+        classic flavors while introducing unexpected elements to surprise and
+        delight.
+      </p>
 
-        <h3>DelishBite: Crafting Memorable Dining Experiences</h3>
-        <p>DelishBite is a place for every occasion. For a casual lunch, enjoy our light yet flavorful offerings, perfect for a quick bite with friends or colleagues. Planning a romantic dinner? Our intimate setting and thoughtfully curated dishes set the stage for an evening to remember. Hosting a family gathering? Our spacious tables and diverse menu cater to all ages, ensuring everyone leaves with a smile. From hearty comfort foods to sophisticated plates, we offer something for every taste and preference.</p>
+      <h3>DelishBite: Crafting Memorable Dining Experiences</h3>
+      <p>
+        DelishBite is a place for every occasion. For a casual lunch, enjoy our
+        light yet flavorful offerings, perfect for a quick bite with friends or
+        colleagues. Planning a romantic dinner? Our intimate setting and
+        thoughtfully curated dishes set the stage for an evening to remember.
+        Hosting a family gathering? Our spacious tables and diverse menu cater
+        to all ages, ensuring everyone leaves with a smile. From hearty comfort
+        foods to sophisticated plates, we offer something for every taste and
+        preference.
+      </p>
 
-        <h3>Discover DelishBite: Flavor, Heart, and Hospitality</h3>
-        <p>Our commitment extends beyond the plate. At DelishBite, hospitality is an art form. Our staff is trained to provide attentive, friendly service that makes you feel like part of the family. The ambiance, with its warm lighting and inviting décor, creates a space where you can relax and savor the moment. Whether you’re celebrating a milestone or simply craving a delicious meal, we strive to make every visit a special occasion.</p>
+      <h3>Discover DelishBite: Flavor, Heart, and Hospitality</h3>
+      <p>
+        Our commitment extends beyond the plate. At DelishBite, hospitality is
+        an art form. Our staff is trained to provide attentive, friendly service
+        that makes you feel like part of the family. The ambiance, with its warm
+        lighting and inviting décor, creates a space where you can relax and
+        savor the moment. Whether you’re celebrating a milestone or simply
+        craving a delicious meal, we strive to make every visit a special
+        occasion.
+      </p>
 
-        <h3>DelishBite: Savoring Tradition, Embracing Innovation</h3>
-        <p>Sustainability is also at our core. We work with local farmers and suppliers to minimize our environmental footprint while supporting the community. From eco-friendly packaging to reducing food waste, we’re dedicated to making a positive impact. At DelishBite, we believe dining is about connection—connecting with loved ones, with great food, and with the world around us.</p>
+      <h3>DelishBite: Savoring Tradition, Embracing Innovation</h3>
+      <p>
+        Sustainability is also at our core. We work with local farmers and
+        suppliers to minimize our environmental footprint while supporting the
+        community. From eco-friendly packaging to reducing food waste, we’re
+        dedicated to making a positive impact. At DelishBite, we believe dining
+        is about connection—connecting with loved ones, with great food, and
+        with the world around us.
+      </p>
 
-        <p>Join us at DelishBite, where every meal is a celebration of flavor, tradition, and togetherness. Whether you’re a first-time guest or a regular, we welcome you with open arms and full plates, ready to create memories that linger long after the last bite.</p>
+      <p>
+        Join us at DelishBite, where every meal is a celebration of flavor,
+        tradition, and togetherness. Whether you’re a first-time guest or a
+        regular, we welcome you with open arms and full plates, ready to create
+        memories that linger long after the last bite.
+      </p>
     </div>
 
-
-
     <footer>
-    <p>&copy; 2025 DelishBite. All rights reserved.</p>
-  </footer>
+      <p>&copy; 2025 DelishBite. All rights reserved.</p>
+    </footer>
     <script src="./index.js"></script>
-</body>
+  </body>
 </html>
