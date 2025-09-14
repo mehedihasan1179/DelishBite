@@ -8,7 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
   hamburger.addEventListener("click", (e) => {
     e.stopPropagation(); // Prevent triggering the outside click
     menuOverlay.classList.toggle("active");
-    hamburgerIcon.textContent = menuOverlay.classList.contains("active") ? "✖" : "☰";
+    hamburgerIcon.textContent = menuOverlay.classList.contains("active")
+      ? "✖"
+      : "☰";
   });
 
   // Close menu when clicking outside
@@ -23,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("imageModal");
@@ -55,11 +56,11 @@ let slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  showSlides((slideIndex += n));
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  showSlides((slideIndex = n));
 }
 
 function showSlides(n) {
@@ -72,58 +73,88 @@ function showSlides(n) {
     console.warn("Slideshow elements not found");
     return;
   }
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+  captionText.innerHTML = dots[slideIndex - 1].alt;
 }
 
-
 document.addEventListener("DOMContentLoaded", function () {
-  window.onscroll = function() { myFunction() };
+  const mainHeader = document.querySelector("header");
+  const aboutHeaderContainer = document.querySelector(".about-header-container");
+  window.onscroll = function () {
+    myFunction();
+  };
 
   function myFunction() {
-    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    var height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
     var scrolled = (winScroll / height) * 100;
     document.getElementById("myBar").style.width = scrolled + "%";
 
-    const aboutHeader = document.querySelector(".about-header");
-    if (aboutHeader) {
-      aboutHeader.style.top = window.scrollY >= 50 ? "0px" : "68px";
+
+    if (window.scrollY >= 50) {
+      mainHeader.style.display = "none";
+      aboutHeaderContainer.style.top = "0px";
+    } else {
+      mainHeader.style.display = "";
+      aboutHeaderContainer.style.top = "80px";
     }
   }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".filter-btn, .read-more-button, .see-all-btn");
 
-document.addEventListener('DOMContentLoaded', function () {
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const menuContainer = document.getElementById('menu-container');
+  buttons.forEach((button) => {
+    button.addEventListener("mousemove", (event) => {
+      const rect = button.getBoundingClientRect();
+
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+
+      button.style.setProperty("--x-pos", `${x}px`);
+      button.style.setProperty("--y-pos", `${y}px`);
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const filterBtn = document.querySelectorAll(".filter-btn-active");
+  const menuContainer = document.getElementById("menu-container");
   let menuData = [];
 
   // Fetch menu data from JSON file
-  fetch('menu.json')
-    .then(response => response.json())
-    .then(data => {
+  fetch("menu.json")
+    .then((response) => response.json())
+    .then((data) => {
       menuData = data;
       displayMenuItems(menuData); // Show all items initially
     })
-    .catch(error => console.error('Error loading menu data:', error));
+    .catch((error) => console.error("Error loading menu data:", error));
 
   // Display menu items
   function displayMenuItems(items) {
-    menuContainer.innerHTML = '';
-    items.forEach(item => {
-      const menuItem = document.createElement('div');
-      menuItem.classList.add('menu-item');
-      menuItem.setAttribute('data-category', item.category);
+    menuContainer.innerHTML = "";
+    items.forEach((item) => {
+      const menuItem = document.createElement("div");
+      menuItem.classList.add("menu-item");
+      menuItem.setAttribute("data-category", item.category);
 
       menuItem.innerHTML = `
         <div class="menu-item-img-wrapper">
@@ -153,27 +184,142 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
           </div>
         </div>
-      `
+      `;
       menuContainer.appendChild(menuItem);
     });
   }
 
   // Filter buttons click event
-  filterButtons.forEach(button => {
-    button.addEventListener('click', function () {
-      filterButtons.forEach(btn => btn.classList.remove('active'));
-      this.classList.add('active');
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      this.classList.add("active");
 
-      const category = this.getAttribute('data-category');
-      if (category === 'all') {
+      const category = this.getAttribute("data-category");
+      if (category === "all") {
         displayMenuItems(menuData);
       } else {
-        const filteredItems = menuData.filter(item => item.category === category);
+        const filteredItems = menuData.filter(
+          (item) => item.category === category
+        );
         displayMenuItems(filteredItems);
       }
     });
   });
 });
+
+// Service section
+fetch("services.json")
+  .then((response) => response.json())
+  .then((services) => {
+    const container = document.getElementById("services-container");
+
+    services.forEach((service) => {
+      const serviceItem = document.createElement("div");
+      serviceItem.classList.add("service-item");
+
+      serviceItem.innerHTML = `
+        <dotlottie-wc
+          src="${service.animation}"
+          style="width: 250px; height: 200px; margin: 0 auto"
+          speed="1"
+          autoplay
+          loop
+        ></dotlottie-wc>
+        <h3>${service.title}</h3>
+        <p>${service.description}</p>
+      `;
+
+      container.appendChild(serviceItem);
+    });
+  })
+  .catch((error) => console.error("Error loading services:", error));
+
+// Blog section - Favorite icon functionality
+// const iconContainer = document.querySelector('.icon-container');
+// const loveIcon = document.querySelector('.blog-fav-icon');
+
+// // Get the initial position of the icon container
+// const initialX = iconContainer.offsetLeft;
+// const initialY = iconContainer.offsetTop;
+
+// // The maximum distance the icon can move from its center
+// const maxDisplacement = 10;
+// let resetTimeoutId;
+
+// document.addEventListener('mousemove', (e) => {
+//   clearTimeout(resetTimeoutId);
+
+//   const mouseX = e.clientX;
+//   const mouseY = e.clientY;
+
+//   const centerX = initialX + iconContainer.offsetWidth / 2;
+//   const centerY = initialY + iconContainer.offsetHeight / 2;
+  
+//   const dx = mouseX - centerX;
+//   const dy = mouseY - centerY;
+  
+//   const clampedDx = Math.max(-maxDisplacement, Math.min(dx, maxDisplacement));
+//   const clampedDy = Math.max(-maxDisplacement, Math.min(dy, maxDisplacement));
+
+//   iconContainer.style.transform = `translate(${clampedDx}px, ${clampedDy}px)`;
+
+//   resetTimeoutId = setTimeout(() => {
+//     iconContainer.style.transform = `translate(0px, 0px)`;
+//   }, 1000);
+// });
+
+// loveIcon.addEventListener('click', () => {
+//   loveIcon.classList.toggle('animated');
+// });
+
+
+const loveIcons = document.querySelectorAll('.blog-fav-icon');
+const imageContainers = document.querySelectorAll('.blog-image-container');
+
+// Maximum distance the icon can move from its center
+// const maxDisplacement = 10;
+
+// Add click event listener to each heart icon
+loveIcons.forEach(icon => {
+  icon.addEventListener('click', () => {
+    icon.classList.toggle('animated');
+  });
+});
+
+// Add mousemove and mouseleave event listeners to each image container
+// imageContainers.forEach(container => {
+//   const iconContainer = container.querySelector('.icon-container');
+//   const initialX = iconContainer.offsetLeft;
+//   const initialY = iconContainer.offsetTop;
+//   let resetTimeoutId;
+
+//   container.addEventListener('mousemove', (e) => {
+//     clearTimeout(resetTimeoutId);
+
+//     const mouseX = e.clientX;
+//     const mouseY = e.clientY;
+
+//     const centerX = initialX + iconContainer.offsetWidth / 2;
+//     const centerY = initialY + iconContainer.offsetHeight / 2;
+
+//     const dx = mouseX - centerX;
+//     const dy = mouseY - centerY;
+
+//     const clampedDx = Math.max(-maxDisplacement, Math.min(dx, maxDisplacement));
+//     const clampedDy = Math.max(-maxDisplacement, Math.min(dy, maxDisplacement));
+
+//     iconContainer.style.transform = `translate(${clampedDx}px, ${clampedDy}px)`;
+//   });
+
+//   container.addEventListener('mouseleave', () => {
+//     clearTimeout(resetTimeoutId);
+//     resetTimeoutId = setTimeout(() => {
+//       iconContainer.style.transform = `translate(0px, 0px)`;
+//     }, 100);
+//   });
+// });
+
 
 
 
