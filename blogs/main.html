@@ -1,1 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DelishBite | Home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../blogs/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js"
+      type="module"
+    ></script>
+  </head>
 
+  <body>
+    <header>
+      <nav>
+        <div class="logo">DelishBite</div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="order.html">Order</a></li>
+          <li><a href="reservation.html">Reservation</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <!-- <button class="animated-border-btn">Book a table</button> -->
+        </ul>
+
+        <div class="icons">
+          <a href="#" class="search-icon"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></a>
+          <a href="#" class="cart-icon"
+            ><i class="fa-solid fa-cart-shopping"></i
+          ></a>
+          <a href="#" class="user-icon"><i class="fa-solid fa-user"></i></a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <span id="hamburger-icon">☰</span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Menu overlay for mobile -->
+    <div class="menu-overlay" id="menuOverlay">
+      <ul class="nav-links-mobile">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="reservation.html">Reservation</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="slider-container">
+        <div class="slider-header">
+          <h2 class="slider-title">Quick & Easy</h2>
+          <div class="slider-buttons">
+            <button id="left-btn"><i class="fa-solid fa-chevron-left"></i></button>
+            <button id="right-btn"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
+        <div class="slider-wrapper">
+          <div class="slider-track">
+            <div
+              class="blog-card"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2');
+              "
+            >
+              <div class="card-content">
+                <h2 class="card-title">15-Minute Garlic Butter Shrimp Pasta</h2>
+                <p class="card-description">
+                  Whip up this delicious shrimp pasta in just 15 minutes! Juicy
+                  shrimp, al dente spaghetti, and a rich garlic butter sauce.
+                </p>
+                <a href="#" class="read-more-btn">Read More</a>
+              </div>
+            </div>
+            <div
+              class="blog-card"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1599921715136-c3fbfe6b87f0');
+              "
+            >
+              <div class="card-content">
+                <h2 class="card-title">One-Pan Chicken Fajita Tacos</h2>
+                <p class="card-description">
+                  Sizzling chicken fajita tacos in one pan in under 20 minutes.
+                  Packed with vibrant peppers and zesty spices.
+                </p>
+                <a href="#" class="read-more-btn">Read More</a>
+              </div>
+            </div>
+            <div
+              class="blog-card"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5');
+              "
+            >
+              <div class="card-content">
+                <h2 class="card-title">5-Ingredient Caprese Salad Wraps</h2>
+                <p class="card-description">
+                  Fresh tomatoes, mozzarella, basil, and balsamic glaze in a
+                  tortilla—ready in 10 minutes!
+                </p>
+                <a href="#" class="read-more-btn">Read More</a>
+              </div>
+            </div>
+            <div
+              class="blog-card"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1512058564366-18510be2db19');
+              "
+            >
+              <div class="card-content">
+                <h2 class="card-title">
+                  Speedy Veggie Stir-Fry with Soy Glaze
+                </h2>
+                <p class="card-description">
+                  Toss veggies in a sweet and savory soy glaze for a healthy,
+                  15-minute meal.
+                </p>
+                <a href="#" class="read-more-btn">Read More</a>
+              </div>
+            </div>
+            <div
+              class="blog-card"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1541519481457-763224274c66');
+              "
+            >
+              <div class="card-content">
+                <h2 class="card-title">Avocado Toast with a Twist</h2>
+                <p class="card-description">
+                  Elevate avocado toast with toppings like cherry tomatoes or
+                  feta. Ready in under 10 minutes.
+                </p>
+                <a href="#" class="read-more-btn">Read More</a>
+              </div>
+            </div>
+            <div
+              class="blog-card"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1595854341625-f33ee25dbf42');
+              "
+            >
+              <div class="card-content">
+                <h2 class="card-title">10-Minute BBQ Chicken Quesadillas</h2>
+                <p class="card-description">
+                  Crispy tortillas with shredded chicken, BBQ sauce, and
+                  cheese—ready in 10 minutes!
+                </p>
+                <a href="#" class="read-more-btn">Read More</a>
+              </div>
+            </div>
+            <div
+              class="blog-card"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1626700051175-97f30a48c828');
+              "
+            >
+              <div class="card-content">
+                <h2 class="card-title">No-Cook Tuna Salad Lettuce Wraps</h2>
+                <p class="card-description">
+                  Refreshing tuna salad lettuce wraps, packed with protein,
+                  ready in 5 minutes.
+                </p>
+                <a href="#" class="read-more-btn">Read More</a>
+              </div>
+            </div>
+            <div
+              class="blog-card"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1621852004158-7779b2629aa8');
+              "
+            >
+              <div class="card-content">
+                <h2 class="card-title">Quick Pesto Veggie Flatbread</h2>
+                <p class="card-description">
+                  Pesto, veggies, and cheese on flatbread, baked in 12 minutes
+                  for a light dinner.
+                </p>
+                <a href="#" class="read-more-btn">Read More</a>
+              </div>
+            </div>
+            <div
+              class="blog-card"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1505252585461-04db1eb84625');
+              "
+            >
+              <div class="card-content">
+                <h2 class="card-title">Easy Breakfast Smoothie Bowl</h2>
+                <p class="card-description">
+                  Blend frozen fruit, yogurt, and milk for a smoothie bowl in 5
+                  minutes.
+                </p>
+                <a href="#" class="read-more-btn">Read More</a>
+              </div>
+            </div>
+            <div
+              class="blog-card"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1547592166-23ac45744c82');
+              "
+            >
+              <div class="card-content">
+                <h2 class="card-title">20-Minute Creamy Tomato Soup</h2>
+                <p class="card-description">
+                  Velvety tomato soup with canned tomatoes and pantry staples in
+                  20 minutes.
+                </p>
+                <a href="#" class="read-more-btn">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="../blogs/script.js"></script>
+  </body>
+</html>
